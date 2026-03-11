@@ -1,4 +1,4 @@
-#TABUADAOPERACOES
+2#TABUADAOPERACOES
 import java.util.Scanner;
 
 public class TabuadaOperacoes {
@@ -131,6 +131,65 @@ public class Senha {
         }
 
         System.out.println("Senha correta! Acesso permitido.");
+
+        sc.close();
+    }
+}
+
+
+
+
+#PRIMOS
+public class Primos {
+    public static void main(String[] args) {
+
+        int soma = 0;
+
+        for (int i = 2; i <= 50; i++) {
+            boolean primo = true;
+
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    primo = false;
+                    break;
+                }
+            }
+
+            if (primo) {
+                System.out.println(i);
+                soma += i;
+            }
+        }
+
+        System.out.println("Soma dos números primos: " + soma);
+    }
+}
+
+
+
+
+POTENCIASEMFUÇAO
+import java.util.Scanner;
+
+public class PontenciaSemFunçao {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int base, expoente;
+        int resultado = 1;
+
+        System.out.print("Digite o primeiro número (base): ");
+        base = sc.nextInt();
+
+        System.out.print("Digite o segundo número (expoente): ");
+        expoente = sc.nextInt();
+
+        for (int i = 1; i <= expoente; i++) {
+            resultado = resultado * base;
+        }
+
+        System.out.println("Resultado: " + resultado);
 
         sc.close();
     }
